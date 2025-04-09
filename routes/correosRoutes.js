@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const correosController = require('../controllers/correosController');
-const auth = require('../middlewares/authMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
-router.get('/', auth, correosController.getCorreos);
-router.get('/servicio/:id_servicio', auth, correosController.getCorreosPorServicio);
-router.post('/', auth, correosController.createCorreo);
-router.delete('/:id', auth, correosController.deleteCorreo);
+router.get('/', authMiddleware, correosController.getCorreos);
+router.get('/servicio/:id_servicio', authMiddleware, correosController.getCorreosByServicio);
+router.post('/', authMiddleware, correosController.createCorreo);
+router.delete('/:id', authMiddleware, correosController.deleteCorreo);
 
 module.exports = router;
