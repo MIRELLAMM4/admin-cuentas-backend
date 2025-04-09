@@ -1,14 +1,14 @@
 {
   "name": "admin-cuentas-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Backend para el sistema de administración de cuentas (usuarios, servicios y correos)",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Mirella",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
@@ -16,5 +16,8 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.14.0"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
